@@ -9,6 +9,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
 
+import java.util.List;
+
 public class Intro extends AppCompatActivity {
 
     @Override
@@ -42,8 +44,8 @@ public class Intro extends AppCompatActivity {
     static class Member{int seq;String name,pass,email,phone,addr,photo;};
     static interface LoginService{public void execute();}
     static interface AddService{public void execute();}
-    static interface ListService{public void execute();}
-    static interface DetailService{public void execute();}
+    static interface ListService{public List<?> execute();}
+    static interface DetailService{public Object execute();}
     static interface UpdateService{public void execute();}
     static interface DeleteService{public void execute();}
     static abstract class QueryFactory{
